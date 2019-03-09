@@ -1,0 +1,25 @@
+# 配置服务名称和端口
+spring:
+  application:
+    name: eurka-server
+server:
+  port: 1001
+
+# 服务注册中心实例配置
+eureka:
+  instance:
+    hostname: localhost
+  client:
+# 是否向服务中心注册自己
+    register-with-eureka: false
+# 是否检索服务
+    fetch-registry: false
+# 服务中心配置内容，指定服务中心的位置
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+# -------------添加健康检查
+# 该配置可以移除这种自我保护机制，防止失效的服务也被一直访问（springclound 默认配置是 true）
+  server:
+    enable-replicated-request-compression: true
+# 该配置可以修改检查失效服务的时间，每隔10s检查失效服务，并移除列表（spring clound 默认为 60s）
+    eviction-interval-timer-in-ms: 10000

@@ -1,0 +1,14 @@
+# \u914D\u7F6E\u670D\u52A1\u53CA\u7AEF\u53E3
+spring:
+  application:
+    name: ribbon-consumer
+server:
+  port: 3001
+
+# \u5C06\u670D\u52A1\u6CE8\u518C\u5230\u6CE8\u518C\u4E2D\u5FC3
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1001/eureka/
+#\u4ECEeureka\u670D\u52A1\u5668\u6CE8\u518C\u8868\u4E2D\u83B7\u53D6\u6CE8\u518C\u4FE1\u606F\u7684\u65F6\u95F4\u95F4\u9694\uFF08s\uFF09\uFF0C\u9ED8\u8BA4\u4E3A30\u79D2
+    registry-fetch-interval-seconds: 5
