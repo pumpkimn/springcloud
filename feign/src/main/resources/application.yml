@@ -1,11 +1,13 @@
-#\u914D\u7F6E\u670D\u52A1\u53CA\u7AEF\u53E3
+# 配置服务及端口
 spring:
   application:
     name: fegin-consumer
 server:
   port: 4001
-# \u5C06\u670D\u52A1\u6CE8\u518C\u5230\u6CE8\u518C\u4E2D\u5FC3
+# 注册到注册中心
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:1001/eureka/
+# 从eureka服务器注册表中获取注册信息的时间间隔（s），默认为30秒
+    registry-fetch-interval-seconds: 5

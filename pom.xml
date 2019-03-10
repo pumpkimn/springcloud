@@ -71,6 +71,22 @@
     </repositories>
 
     <modules>
+        <!-- 服务注册于发现-->
         <module>eureka-server</module>
+        <!-- 服务提供方-->
+         <module>eureka-discovery</module>
+        <!-- 健康检查设置-->
+        <module>eureka-discovery-health</module>
+        <!-- 服务消费者 -->
+        <module>ribbon</module>
+        <!-- 服务消费者 -->
+        <module>feign</module>
+        <!-- 服务容错 -->
+        <module>hystrix</module>
+        <!-- 服务容错面板-->
+        <module>hystrix-dashboard</module>
+        <!-- 监控数据集群 -->
+        <module>turbine</module>
     </modules>
+
 </project>
